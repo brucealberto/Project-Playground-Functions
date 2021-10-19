@@ -89,12 +89,32 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(stringEncode) {
   // seu código aqui
+  let vogais = 'aeiou';
+  let store = "";
+  for (index = 0; index < stringEncode.length; index += 1) {
+    if (vogais.indexOf(stringEncode[index]) > -1) {
+      store += vogais.indexOf(stringEncode[index]) + 1;
+    } else {
+      store += stringEncode[index]
+    }
+  }
+  return store;
 }
 
-function decode() {
-  // seu código aqui
+function decode(stringDecode) {
+  let vogais = 'aeiou';
+  let numero = '12345';
+  let store = '';
+  for (index = 0; index < stringDecode.length; index += 1) {
+    if (numero.indexOf(stringDecode[index]) > -1) {
+      store += vogais[stringDecode[index] - 1];
+    } else {
+      store += stringDecode[index]
+    }
+  }
+  return store;
 }
 
 module.exports = {
